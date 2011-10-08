@@ -18,16 +18,16 @@ Ext.define('OM.model.Order',
 		{name:'customerID',dataType:'string'},
 		{name:'amount',dataType:'string'}
 		],
-	proxy:
-		{
-			type:'ajax',								//bind to local data
+	
+	proxy:  {
+			type:'ajax',								//fetch remote data
 			url:'services/GetOrders.php',
 			reader:
-			{
-				type:'json',
-				root:'d',
-				successProperty:'success'
-			}
+				{
+					type:'json',
+					root:'d',
+					successProperty:'success'
+				}
 		}
 			
 	});
