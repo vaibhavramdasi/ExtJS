@@ -3,7 +3,6 @@
  * @description Viewport component encapsulating whole browser window.
  * @namespace OM.view.Viewport
  * @author Vaibhav Ramdasi
- * @last updated 10/20/2011
  */
 
 
@@ -33,8 +32,18 @@ Ext.define('OM.view.Viewport',
 			minHeight:100,
 			frame:true,
 			border:false,
-			autoHeight:true
-			
+			autoHeight:true,
+			items:
+				[
+					{
+						xtype:'customerinfo',
+						flex:1,
+						minHeight:100,
+						autoHeight:true
+						
+					}
+				]
+				
 		}
 	]
 	
