@@ -3,14 +3,13 @@
  * @description Models OM customer details.
  * @namespace OM.model.Customer
  * @author Vaibhav Ramdasi
- * @last updated 10/20/2011
  */
 
 
 Ext.define('OM.model.Customer',
 	{
+	
 	extend:'Ext.data.Model',
-
 	fields:
 		[
 		{name:'customerID',dataType:'string'},
@@ -18,15 +17,16 @@ Ext.define('OM.model.Customer',
 		{name:'customerAddress',dataType:'string'},
 		{name:'totalOrders',dataType:'string'}
 		],
-		proxy:
-	{
-		type:'memory',								//bind to local data
-		reader:
+	proxy:
 		{
-			type:'json',
-			root:'data'
-			
+			type:'ajax',								//bind to local data
+			url:'services/GetCustomerDetails.php',
+			reader:
+				{
+					type:'json',
+					root:'data'
+					
+				}
 		}
-	}
 		
 	});
