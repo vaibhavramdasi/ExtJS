@@ -3,7 +3,6 @@
  * @description stores Order data using Order model.
  * @namespace OM.store.OrdersStore
  * @author Vaibhav Ramdasi
- * @last updated 10/20/2011
  */
 
 Ext.define('OM.store.OrdersStore',
